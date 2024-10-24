@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | MatrimonyMatch</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function redirectToWelcome() {
+            window.location.href = "welcome.html";  // Redirect to the welcome page
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Sign Up Section -->
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-box">
+                <h2>Create Your Account</h2>
+                <form id="signupForm" onsubmit="event.preventDefault(); redirectToWelcome();">
+                    <div class="input-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required>
+                    </div>
+                    <div class="input-group">
+                        <button type="submit" class="btn" id="signupButton">Sign Up</button>
+                    </div>
+                    <p>Already have an account? <a href="login.html">Login</a></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

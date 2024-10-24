@@ -1,0 +1,176 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header Styles with Background Gradient */
+header {
+    background: linear-gradient(90deg, #ff6347, #ff4500); /* Gradient background for aesthetics */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for a raised effect */
+}
+
+header .logo {
+    font-size: 2rem;
+}
+
+header .logo span {
+    color: #fff;
+}
+
+/* Navigation Menu */
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    position: relative;
+}
+
+/* Hover Effect: Underline Animation */
+header nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: #fff;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease; /* Smooth underline grow effect */
+}
+
+header nav ul li a:hover::after {
+    width: 100%; /* Expands underline to full width on hover */
+}
+
+/* Hover Effect: Color Change */
+header nav ul li a:hover {
+    color: #ffebcd; /* Light beige on hover for better contrast */
+}
+
+/* Hero Section */
+.hero {
+    background: url('hero.jpg') no-repeat center center/cover;
+    color: #fff;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero h2 {
+    font-size: 3rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+.hero .btn {
+    padding: 10px 20px;
+    background: #ff6347;
+    color: #fff;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* Image in Hero Section */
+.image-container {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.animated-image {
+    max-width: 50%; /* Make the image responsive */
+    height: auto;
+    animation: bounce 2s infinite;
+}
+
+/* Animation: Bouncing Effect */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Features Section */
+.features {
+    padding: 20px;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.feature-box {
+    margin: 20px 0;
+}
+
+.feature-box h3 {
+    font-size: 1.8rem;
+}
+
+.feature-box p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Footer Section */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
